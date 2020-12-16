@@ -2,12 +2,11 @@ package signIn;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import signIn.pages.MainPage;
 
-public class StepsDef {
+public class StepDefs {
 
     WebDriver driver;
 
@@ -16,14 +15,15 @@ public class StepsDef {
         System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver87");
         driver= new ChromeDriver();
         driver.manage().window().maximize();
-        driver.get("https://grinfer.com");
+
+        MainPage mainPage = new MainPage(driver);
+        mainPage.open();
     }
 
     @Then("Click {string} button")
     public void clickButton(String text) {
-        String xpath = "//div[text() = '" + text + "']";
+        MainPage mainPage = new MainPage(driver);
+        mainPage.clickLoginInButton(text);
 
-        WebElement button = driver.findElement(By.xpath(xpath));
-        button.click();
     }
 }
