@@ -6,7 +6,8 @@ Feature: Login User
     Then Click "Log In" button
     Then Input login
     Then Input password
-    Then Click "submit" button span
+    Then Click "Log in" button span
+    Then Content is "Spread the Word About Grinfer and Get Rewarded" visible
 
 
 

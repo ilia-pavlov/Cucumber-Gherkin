@@ -7,9 +7,9 @@ import org.openqa.selenium.WebDriver;
 import signIn.pages.LogInPage;
 
 
-public class SingIndefs {
+public class SingInDefs {
 
-    private WebDriver driver = Hooks.driver;
+    private final WebDriver driver = Hooks.driver;
     LogInPage logInPage = new LogInPage(driver);
 
     @Then("Input login")
@@ -20,10 +20,5 @@ public class SingIndefs {
     @Then("Input password")
     public void inputPassword() {
         logInPage.passwordInput(UserConfig.USER_PASSWORD);
-    }
-
-    @Then("Click {string} button span")
-    public void clickButtonSpan(String arg0) {
-        // finish submit button
     }
 }
