@@ -25,6 +25,5 @@ public class StepDefs {
     public void contentWithVisible(String arg0) {
         boolean contentIsVisible = basicPage.contentIsVisible(arg0);
         Assert.assertTrue(contentIsVisible);
-    } //finish assert to run whole scennario
-
+    }
 }
