@@ -16,7 +16,7 @@ public class BasicPage {
         this.driver = driver;
     }
 
-    public static void clickSubmitButton(String text) {
+    public static void clickButtonSpan(String text) {
         String xpath = "//span[text() = '" + text + "']/..";
         WebElement submitButton = driver.findElement(By.xpath(xpath));
         submitButton.click();

@@ -25,10 +25,8 @@ public class BasicSteps {
         driver.findElement(By.name("password")).sendKeys(password);
     }
 
-
     @Then("Reset the credential")
     public void resetTheCredential()throws Throwable  {
         driver.findElement(By.name("btnReset")).click();
     }
-
 }

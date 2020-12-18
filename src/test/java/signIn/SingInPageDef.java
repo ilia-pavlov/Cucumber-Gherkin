@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
 import signIn.pages.LogInPage;
 
 
-public class SingInDefs {
+public class SingInPageDef {
 
     private final WebDriver driver = Hooks.driver;
     LogInPage logInPage = new LogInPage(driver);
