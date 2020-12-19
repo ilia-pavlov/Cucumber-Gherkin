@@ -7,10 +7,10 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class LogInPage {
+public class SingInPage {
 
     private  WebDriver driver;
-    public LogInPage(WebDriver driver) {
+    public SingInPage(WebDriver driver) {
         this.driver = driver;
     }
 
