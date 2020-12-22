@@ -32,4 +32,9 @@ public class BasicPageDef {
     public void openPage(String arg0) {
         driver.get(EnvConfig.URI_LOGIN + arg0);
     }
+
+    @Then("Click {string} button li")
+    public void clickButtonLi(String arg0) {
+        basicPage.clickButtonLi(arg0);
+    }
 }

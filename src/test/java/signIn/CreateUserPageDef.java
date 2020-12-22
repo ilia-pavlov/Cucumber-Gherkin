@@ -3,6 +3,7 @@ package signIn;
 import confing.UserConfig;
 import io.cucumber.java.en.Then;
 import org.apache.commons.lang3.RandomStringUtils;
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import signIn.pages.CreateUserPage;
 
@@ -30,7 +31,21 @@ public class CreateUserPageDef {
     @Then("Input Last Name")
     public void inputLastName() {
         String lastName = UserConfig.USER_LAST_NAME;
-        createUserPage.inputFirstName(lastName);
+        createUserPage.inputLastName(lastName);
         put("lastName", lastName );
+    }
+
+    @Then("Verify First Name")
+    public void verifyFirstName() {
+        String expect = get("firstName", String.class);
+        String actual = createUserPage.getFirstName();
+        Assert.assertEquals(expect, actual);
+    }
+
+    @Then("Verify Last Name")
+    public void verifyLastName() {
+        String expect = get("lastName", String.class);
+        String actual = createUserPage.getLastName();
+        Assert.assertEquals(expect, actual);
     }
 }

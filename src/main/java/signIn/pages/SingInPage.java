@@ -14,7 +14,7 @@ public class SingInPage {
         this.driver = driver;
     }
 
-    public void loginInput(String text){
+    public void loginInput(String text) {
         String xpath = "//input[@id = 'email']";
         ExpectedCondition<WebElement>condition = ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath));
         new WebDriverWait(driver, 10).until(condition);
@@ -23,7 +23,7 @@ public class SingInPage {
         emailFiled.sendKeys(text);
     }
 
-    public void passwordInput(String text){
+    public void passwordInput(String text) {
         String xpath = "//input[@id = 'password']";
         WebElement passwordFiled = driver.findElement(By.xpath(xpath));
         passwordFiled.sendKeys(text);

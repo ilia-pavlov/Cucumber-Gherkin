@@ -14,26 +14,34 @@ public class CreateUserPage {
         this.driver = driver;
     }
 
+
     public void inputEmail(String text) {
         String xpath = "//input[@id = 'email']";
         ExpectedCondition<WebElement> condition = ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath));
         new WebDriverWait(driver, 10).until(condition);
 
-        WebElement emailFiled = driver.findElement(By.xpath(xpath));
+        WebElement emailFiled = driver.findElement(By.xpath("//input[@id = 'email']"));
         emailFiled.sendKeys(text);
     }
 
     public void inputFirstName(String text) {
-        String xpath = "//input[@id = 'firstName']";
-        WebElement firstName = driver.findElement(By.xpath(xpath));
+        WebElement firstName = driver.findElement(By.xpath("//input[@id = 'firstName']"));
         firstName.sendKeys(text);
     }
 
     public void inputLastName(String text) {
-        String xpath = "//input[@id = 'lastName']";
-        WebElement lastName = driver.findElement(By.xpath(xpath));
+        WebElement lastName = driver.findElement(By.xpath("//input[@id = 'lastName']"));
         lastName.sendKeys(text);
     }
-    // inputLastName issue | agreement box
+
+    public String getFirstName() {
+        WebElement firstName = driver.findElement(By.xpath("//input[@id='form_firstName']"));
+        return firstName.getAttribute("value");
+    }
+
+    public String getLastName() {
+        WebElement lastName = driver.findElement(By.xpath("//input[@id='form_lastName']"));
+        return lastName.getAttribute("value");
+    }
 }
 

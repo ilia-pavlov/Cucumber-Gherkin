@@ -18,8 +18,14 @@ public class BasicPage {
 
     public static void clickButtonSpan(String text) {
         String xpath = "//span[text() = '" + text + "']/..";
-        WebElement submitButton = driver.findElement(By.xpath(xpath));
-        submitButton.click();
+        WebElement buttonSpan = driver.findElement(By.xpath(xpath));
+        buttonSpan.click();
+    }
+
+    public void clickButtonLi(String text) {
+        String xpath = "//li[text() = '" + text + "']/..";
+        WebElement buttonLi = driver.findElement(By.xpath(xpath));
+        buttonLi.click();
     }
 
     public void clickLoginInButton(String text) {
@@ -35,4 +41,5 @@ public class BasicPage {
         WebElement content = driver.findElement(By.xpath(xpath));
         return content.isDisplayed();
     }
+
 }
