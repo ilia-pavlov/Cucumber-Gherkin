@@ -3,7 +3,7 @@
 1. setup JUnit Jupiter
 2. brew install maven
 3. implement log4j
-4. pugIn Cucumber
+4. setup Cucumber with Gherkin
 
 =-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-
 <br>[Cucumber](https://cucumber.io/docs/guides/10-minute-tutorial/) </br>
